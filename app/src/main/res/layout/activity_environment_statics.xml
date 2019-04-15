@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.luxianglin.smarthomeofandroid.Layout.DataVisualFragment">
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/currenttime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <lecho.lib.hellocharts.view.ColumnChartView
+                        android:id="@+id/ccv_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:transitionName="column" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <lecho.lib.hellocharts.view.ColumnChartView
+                        android:id="@+id/ccv_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:transitionName="column" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <lecho.lib.hellocharts.view.ColumnChartView
+                        android:id="@+id/ccv_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:transitionName="column" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <lecho.lib.hellocharts.view.ColumnChartView
+                        android:id="@+id/ccv_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:transitionName="column" />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
